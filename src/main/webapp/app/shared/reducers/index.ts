@@ -12,6 +12,26 @@ import activate, { ActivateState } from 'app/modules/account/activate/activate.r
 import password, { PasswordState } from 'app/modules/account/password/password.reducer';
 import settings, { SettingsState } from 'app/modules/account/settings/settings.reducer';
 import passwordReset, { PasswordResetState } from 'app/modules/account/password-reset/password-reset.reducer';
+// prettier-ignore
+import professor, {
+  ProfessorState
+} from 'app/entities/professor/professor.reducer';
+// prettier-ignore
+import curso, {
+  CursoState
+} from 'app/entities/curso/curso.reducer';
+// prettier-ignore
+import disciplina, {
+  DisciplinaState
+} from 'app/entities/disciplina/disciplina.reducer';
+// prettier-ignore
+import sala, {
+  SalaState
+} from 'app/entities/sala/sala.reducer';
+// prettier-ignore
+import predio, {
+  PredioState
+} from 'app/entities/predio/predio.reducer';
 /* jhipster-needle-add-reducer-import - JHipster will add reducer here */
 
 export interface IRootState {
@@ -25,6 +45,11 @@ export interface IRootState {
   readonly passwordReset: PasswordResetState;
   readonly password: PasswordState;
   readonly settings: SettingsState;
+  readonly professor: ProfessorState;
+  readonly curso: CursoState;
+  readonly disciplina: DisciplinaState;
+  readonly sala: SalaState;
+  readonly predio: PredioState;
   /* jhipster-needle-add-reducer-type - JHipster will add reducer type here */
   readonly loadingBar: any;
 }
@@ -40,6 +65,11 @@ const rootReducer = combineReducers<IRootState>({
   passwordReset,
   password,
   settings,
+  professor,
+  curso,
+  disciplina,
+  sala,
+  predio,
   /* jhipster-needle-add-reducer-combine - JHipster will add reducer here */
   loadingBar
 });
